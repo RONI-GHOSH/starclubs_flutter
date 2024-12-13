@@ -42,7 +42,7 @@ class _PaymentPageState extends State<PaymentPage> {
   Future<void> _fetchUpiId(String method) async {
     print('Fetching UPI ID...method $method');
     const url =
-        'https://starclubs.in/betcircle/api/getPaymentMethods.php'; // Update with your actual API URL
+        'https://sapi.bhaaratcore.in/api/getPaymentMethods.php'; // Update with your actual API URL
     final response = await http.get(Uri.parse('$url?method_name=$method'));
     print(response.body);
     if (response.statusCode == 200) {
@@ -247,7 +247,7 @@ class _PaymentPageState extends State<PaymentPage> {
       'User-Agent': 'Thunder Client (https://www.thunderclient.com)'
     };
     var url =
-        Uri.parse('https://starclubs.in/betcircle/api/submitPaymentProof.php');
+        Uri.parse('https://sapi.bhaaratcore.in/api/submitPaymentProof.php');
     if (_fileName == null) {
       CustomAlert.error("Error", "Please select screenshot");
       setState(() {
@@ -318,7 +318,7 @@ class _PaymentPageState extends State<PaymentPage> {
     };
 
     // Define URL
-    var url = Uri.parse('https://starclubs.in/betcircle/api/getPaymentQr.php');
+    var url = Uri.parse('https://sapi.bhaaratcore.in/api/getPaymentQr.php');
 
     // Create request
     var req = http.Request('GET', url);

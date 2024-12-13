@@ -53,7 +53,7 @@ class HomePageController extends GetxController {
   static getImages() async {
     sliderImages.clear();
     final url =
-        Uri.parse("https://starclubs.in/betcircle/api/getSliderImages.php");
+        Uri.parse("https://sapi.bhaaratcore.in/api/getSliderImages.php");
     final headers = {
       "Content-Type": "application/json",
       // "X-Requested-With": "XMLHttpRequest",

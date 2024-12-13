@@ -304,8 +304,8 @@ class _AddMoneyPageState extends State<AddMoneyPage> {
 
           if(paymentType.toLowerCase().trim() == "gateway"){
             final id = await UserInfo.getUserInfo() ?? '';
-            html.window.location.href = 'https://starclubs.in/betcircle/api/pay_here.php?amount=${money.text.toString()}&udf1=${id}';
-            // launchUrlString('https://starclubs.in/betcircle/api/pay_here.php?amount=${money.text.toString()}&udf1=${id}');
+            html.window.location.href = 'https://sapi.bhaaratcore.in/api/pay_here.php?amount=${money.text.toString()}&udf1=${id}';
+            // launchUrlString('https://sapi.bhaaratcore.in/betcircle/api/pay_here.php?amount=${money.text.toString()}&udf1=${id}');
              return;
           }
 
